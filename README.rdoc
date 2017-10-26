@@ -1,3 +1,3 @@
 == README
 
-ALpha-Blog repository.
+Udemy Ruby on Rails course ALpha-Blog repository.
