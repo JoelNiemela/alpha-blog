@@ -22,33 +22,6 @@
                 border: none;
             }
             
-            .dropdown {
-                float: right;
-                position: relative;
-                display: inline-block;
-            }
-            
-            .dropdown-content {
-                right: 0;
-                display: none;
-                position: fixed;
-                background-color: #f6f6f6;
-                min-width: 230px;
-                width: 260px;
-                overflow: auto;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                z-index: 1;
-            }
-            
-            .dropdown-content a {
-                color: black;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-            }
-            
-            .dropdown a:hover {background-color: #ddd}
-            
             .show {display:block;}
             
             .header {
@@ -95,52 +68,17 @@
                 margin: 0px 0px 0px 80px;
             }
         </style>
-        <script>
-            /* When the user clicks on the button,
-            toggle between hiding and showing the dropdown content */
-            function searchFunction() {
-                document.getElementById("searchlist").classList.toggle("show");
-            }
-            
-            function filterFunction() {
-                var input, filter, ul, li, a, i;
-                input = document.getElementById("searchInput");
-                filter = input.value.toUpperCase();
-                div = document.getElementById("searchlist");
-                a = div.getElementsByTagName("a");
-                for (i = 0; i < a.length; i++) {
-                    if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
-                        a[i].style.display = "";
-                    } else {
-                        a[i].style.display = "none";
-                    }
-                }
-            }
-        </script>
     </head>
     <body>
         <ul class="navbar">
           <li><a class="active" href="home">Home</a></li>
-          <li><a href="more">More</a></li>
-          <li style="float:right"><a href="news">News</a></li>
-          <li style="float:right"><a href="contact">Contact</a></li>
-          <li style="float:right"><a href="about">About</a></li>
-          <li style="float:right"><a onclick="searchFunction()" href="#search">Search</a></li>
+          <li><a href="articles">Articles</a></li>
+          <li style="float:right"><a href="articles">Browse</a></li>
+          <li style="float:right"><a href="articles">Edit</a></li>
+          <li style="float:right"><a href="articles/new">New</a></li>
         </ul>
         <br>
         <br>
-        <div class="dropdown">
-            <div id="searchlist" class="dropdown-content">
-                <input type="text" placeholder="Search.." id="searchInput" onkeyup="filterFunction()">
-                <a href="about">About</a>
-                <a href="contact">Contact</a>
-                <a href="home">Home</a>
-                <a href="news">News</a>
-                <a href="more" class="header">More</a>
-                <a href="games">Games</a>
-                <a href="tutorials">Tutorials</a>
-            </div>
-        </div>
         <div style="background-color:#404040;color:white;padding:20px;">
             <%= image_tag 'Alpha-Blog.png' %>
             <br>
@@ -151,12 +89,11 @@
         <div id="indent">
             <h1>Hello There!</h1>
             <hr>
-            <p id="extraindent">Welcome to the official HMI Studios Website! Browse for fun stuff in our two categories:</p>
+            <p id="extraindent">Welcome to Alpha-Blog! Create, Read, Update, and Delete Articles!</p>
             <br>
-            <a id="extraindent" href="games">Games</a>
+            <a id="extraindent" href="articles">Articles</a>
             <br>
             <br>
-            <a id="extraindent" href="tutorials">Tutorials</a>
         </div>
     </body>
 </html>
