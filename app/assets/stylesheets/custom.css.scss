@@ -1,2 +1,44 @@
+$navbar-default-bg: #6f96d6;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {
+    float: left;
+    font-size: 1.2em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    font-weight: bold;
+}
+
+#logo:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.button {
+    background-color: #4e89e8;
+}
+
+.button:hover {
+    transition: background 0.3s linear;
+}
+
+.button-right {
+    border-radius: 0px 30px 30px 0px;
+    background-color: #4e89e8;
+}
+
+.button-right:hover {
+    transition: background 0.3s linear;
+}
+
+.button-left {
+    border-radius: 30px 0px 0px 30px;
+    background-color: #4e89e8;
+}
+
+.button-left:hover {
+    transition: background 0.3s linear;
+}
