@@ -1,14 +1,16 @@
 <% if @article.errors.any? %>
     <h2>The following errors prevented the article from getting created</h2>
-
-    <% @article.errors.full_messages.each do |msg| %>
-        <div class="alert alert-danger" role="alert">
-            <p>
+    
+    <div class="alert alert-danger" role="alert">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <p><%= @article.errors.full_messages.length %> errors prohibited this article from being saved</p>
+        <% @article.errors.full_messages.each do |msg| %>
+            <p>&emsp;
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
             <%= msg %>
             </p>
-        </div>
-    <% end %>
+        <% end %>
+    </div>
 <% end %>
 
 <div class="row">
