@@ -109,6 +109,17 @@ $navbar-default-bg: #6f96d6;
 }
 
 .input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 12px 10px 12px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.animated-input {
     width: 130px;
     box-sizing: border-box;
     border: 2px solid #ccc;
@@ -119,6 +130,15 @@ $navbar-default-bg: #6f96d6;
     transition: width 0.4s ease-in-out;
 }
 
-.input:focus {
+.animated-input:focus {
     width: 100%;
+}
+
+.text-box {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 12px 10px 12px 20px;
 }
