@@ -9,8 +9,10 @@ Rails.application.routes.draw do
   get '/home', to: 'pages#home'
   get '/about', to: 'pages#about'
   get '/new', to: 'articles#new'
+  get '/signup', to: 'users#new'
   
   resources :articles
+  resources :users, except: [:new]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
