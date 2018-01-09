@@ -22,6 +22,9 @@ $(document).ready(function() {
         <tr>
             <th>Title</th>
             <th>Description</th>
+            <th>Created by</th>
+            <th>Created</th>
+            <th>Updated</th>
         </tr>
     </thead>
     <tbody id="table">
@@ -29,6 +32,7 @@ $(document).ready(function() {
         <tr>
             <td><%= article.title %></td>
             <td><%= truncate(article.description, length: 50) %></td>
+            <td><%= if article.user then article.user.username else "Unknown" end %>
             <td><%= link_to "Edit", edit_article_path(article), class: "btn btn-xs btn-primary" %></td>
             <td><%= link_to "Delete", article_path(article), method: :delete, 
                 data: {confirm: "Are you sure you want to delete this article?"}, 

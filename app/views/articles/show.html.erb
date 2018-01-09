@@ -29,7 +29,8 @@
 </div>
 
 <hr>
-    <p>Side bar:</p>
+    <p>Created: <%= time_ago_in_words(@article.created_at) %> ago</p>
+    <p>Last updated: <%= time_ago_in_words(@article.updated_at) %> ago</p>
 <hr>
 
 <div class="container col-xs-12">
