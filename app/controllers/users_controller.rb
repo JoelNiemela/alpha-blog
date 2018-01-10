@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+    def index
+		@users = User.all
+	end
+    
     def new
        @user = User.new
     end
@@ -9,6 +13,21 @@ class UsersController < ApplicationController
            flash[:success] = "Welcome to Alphe Blog #{@user.username}!"
         else
            render 'new' 
+        end
+    end
+    
+    def edit
+       @user = User.find(params[:id]) 
+    end
+    
+    def update
+        @user = User.find(params[:id]) 
+        
+        if @user.update(user_params) then
+            flash[:success] = "Yout account was successfully updated"
+            redirect_to articles_path
+        else
+           render 'edit' 
         end
     end
     

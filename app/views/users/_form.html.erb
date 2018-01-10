@@ -41,8 +41,8 @@
                     <div class="form-group">
                         <hr>
                         <div class="col-sm-0">
-                            <%= f.submit "Sign up", class: "btn btn-primary"%>
-                            <%= link_to "Back to articles listing", articles_path, style: 'float: right' %>
+                            <%= f.submit(@user.new_record? ? "Sign up" : "Update account", class: "btn btn-primary") %>
+                            <%= link_to "Back to users listing", users_path, style: 'float: right' %>
                         </div>
                     </div>
                 </div>
