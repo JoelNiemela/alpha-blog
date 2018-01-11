@@ -16,12 +16,6 @@ class UsersController < ApplicationController
         end
     end
     
-    def destroy
-		@user.destroy
-		flash[:success] = "Article was successfully deleted"
-		redirect_to users_path
-	end
-    
     def edit
        @user = User.find(params[:id])
     end
