@@ -29,7 +29,7 @@ $(document).ready(function() {
         <tr>
             <td><%= user.username %></td>
             <td><%= user.email %></td>
-            <% if logged_in? and current_user == user %>
+            <% if logged_in? and current_user == user then %>
                 <td><%= link_to "Edit", edit_user_path(user), class: "btn btn-xs btn-primary" %></td>
                 <td><%= link_to "Delete", user_path(user), method: :delete, 
                     data: {confirm: "Are you sure you want to delete this user?"}, 
